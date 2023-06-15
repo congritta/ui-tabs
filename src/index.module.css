@@ -1,0 +1,28 @@
+.Tabs {
+  display: flex;
+  overflow: auto;
+  background: var(--cui-black-color-100);
+}
+
+@media (prefers-color-scheme: dark) {
+  .Tabs {
+    background: var(--cui-black-color-900);
+  }
+}
+
+.Tabs:not(:first-child) {
+  margin-top: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tab[class*="_isActive"] {
+  border-bottom-color: var(--cui-accent-color-700);
+}
